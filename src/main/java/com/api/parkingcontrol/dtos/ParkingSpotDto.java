@@ -3,12 +3,15 @@ package com.api.parkingcontrol.dtos;
 import lombok.Data;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Data
 public class ParkingSpotDto {
 
     private UUID id;
+
+    private LocalDateTime registrationDate;
 
     @NotBlank
     private String parkingSpotNumber;
