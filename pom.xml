@@ -15,6 +15,9 @@
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>11</java.version>
+		<!-- O Lombok 1.18.22 (padrao do Spring Boot 2.6.4) nao compila em JDK 21+.
+		     Somente o Lombok foi atualizado; Java 11 e Spring Boot 2.6.4 permanecem. -->
+		<lombok.version>1.18.42</lombok.version>
 	</properties>
 	<dependencies>
 		<dependency>

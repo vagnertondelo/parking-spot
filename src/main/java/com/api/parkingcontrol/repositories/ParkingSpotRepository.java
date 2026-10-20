@@ -15,4 +15,11 @@ public interface ParkingSpotRepository extends JpaRepository<ParkingSpotModel, U
 
         boolean existsByApartmentAndBlock(String apartment, String block);
 
+        // Usados na edição: ignoram o próprio registro (id) na verificação de duplicidade
+        boolean existsByLicensePlateCarAndIdNot(String licensePlateCar, UUID id);
+
+        boolean existsByParkingSpotNumberAndIdNot(String parkingSpotNumber, UUID id);
+
+        boolean existsByApartmentAndBlockAndIdNot(String apartment, String block, UUID id);
+
 }
